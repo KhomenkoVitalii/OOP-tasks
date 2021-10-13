@@ -1,12 +1,4 @@
 class Reader (var name: String, var ticketID: Int, var faculty: String, var birthDay: Long, var phoneNum: Int){
-    init {
-        name = "Undefined";
-        ticketID = -1;
-        faculty = "Undefined";
-        birthDay = -1;
-        phoneNum = -1;
-    }
-
     fun takeBook(){}
 
     fun takeBook(numOfTakingBooks: Int){
@@ -34,4 +26,13 @@ class Reader (var name: String, var ticketID: Int, var faculty: String, var birt
     fun returnBook(listOfBooks: MutableList<Book>){
         println("$name return $listOfBooks books!");
     }
+}
+
+fun main() {
+    var books = mutableListOf<Book>()
+    books.add(Book("SomeAuthor", "SomeName"))
+    books.add(Book("SomeAuthor2", "SomeName2"))
+    books.add(Book("SomeAuthor3", "SomeName3"))
+
+    for (book in books) println("${book.authorName} - ${book.bookName}")
 }
