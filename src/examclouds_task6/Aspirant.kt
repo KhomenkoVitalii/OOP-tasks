@@ -1,7 +1,5 @@
 package examclouds_task6
 
-import examclouds_task6.Student
-
 class Aspirant (firstName: String, lastName: String, group: String, averageMark: Double, var isScientificWork: Boolean) : Student(firstName, lastName, group, averageMark) {
     override fun getScholarship(): Double{
         return if (averageMark == 5.0){
